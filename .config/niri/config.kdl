@@ -173,6 +173,12 @@ window-rule {
 }
 
 window-rule {
+	match app-id="java"
+	match app-id="com-sun-tools-javac-launcher-SourceLauncher"
+	open-floating true
+}
+
+window-rule {
   match app-id="org.telegram.desktop" title="Media viewer"
   open-fullscreen false
   open-floating true
@@ -386,7 +392,7 @@ binds {
 }
 
 debug {
-   honor-xdg-activation-with-invalid-serial
+   // honor-xdg-activation-with-invalid-serial
    // preview-render "screencast"
-   wait-for-frame-completion-before-queueing
+   // wait-for-frame-completion-before-queueing
 }
