@@ -147,18 +147,18 @@ animations {
   }
 
 window-rule {
+  geometry-corner-radius 0
+  draw-border-with-background false
+  clip-to-geometry true
+  tiled-state true
+}
+
+window-rule {
 	match app-id="xdg-desktop-portal-gtk"
 	// match app-id="org.gnome.FileRoller"
   default-column-width { proportion 0.6; }
   default-window-height { proportion 0.65; }
   open-floating true
-}
-
-window-rule {
-  geometry-corner-radius 0
-  draw-border-with-background false
-  clip-to-geometry true
-  tiled-state true
 }
 
 window-rule {
@@ -181,9 +181,15 @@ window-rule {
 
 window-rule {
 	match app-id="java"
-	match app-id="sun-awt-X11-XFramePeer"
 	match app-id="com-sun-tools-javac-launcher-SourceLauncher"
   open-floating true
+}
+
+window-rule {
+	match app-id="org.pulseaudio.pavucontrol"
+	open-floating true
+	default-column-width { proportion 0.5; }
+	default-window-height { proportion 0.7; }
 }
 
 window-rule {
@@ -247,6 +253,7 @@ binds {
     XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
     XF86AudioLowerVolume  allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
     XF86AudioMute         allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+		XF86AudioMicMute			allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
     XF86MonBrightnessUp   allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
 
@@ -348,15 +355,15 @@ binds {
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
 		Mod+0 { focus-workspace 10; }
-    Mod+Shift+1 { move-column-to-workspace 1; }
-    Mod+Shift+2 { move-column-to-workspace 2; }
-    Mod+Shift+3 { move-column-to-workspace 3; }
-    Mod+Shift+4 { move-column-to-workspace 4; }
-    Mod+Shift+5 { move-column-to-workspace 5; }
-    Mod+Shift+7 { move-column-to-workspace 7; }
-    Mod+Shift+8 { move-column-to-workspace 8; }
-    Mod+Shift+9 { move-column-to-workspace 9; }
-    Mod+Shift+0 { move-column-to-workspace 10; }
+    Mod+Ctrl+1 { move-column-to-workspace 1; }
+    Mod+Ctrl+2 { move-column-to-workspace 2; }
+    Mod+Ctrl+3 { move-column-to-workspace 3; }
+    Mod+Ctrl+4 { move-column-to-workspace 4; }
+    Mod+Ctrl+5 { move-column-to-workspace 5; }
+    Mod+Ctrl+7 { move-column-to-workspace 7; }
+    Mod+Ctrl+8 { move-column-to-workspace 8; }
+    Mod+Ctrl+9 { move-column-to-workspace 9; }
+    Mod+Ctrl+0 { move-column-to-workspace 10; }
 
     Alt+Tab repeat=false { focus-workspace-previous; }
 
