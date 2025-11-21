@@ -162,6 +162,13 @@ window-rule {
 }
 
 window-rule {
+	match app-id="vesktop" title="vesktop"
+	focus-ring {
+		off
+	}
+}
+
+window-rule {
   match app-id="firefox"
 	match app-id="chromium-browser"
   match app-id="Spotify"
@@ -174,8 +181,9 @@ window-rule {
 
 window-rule {
 	match app-id="java"
+	match app-id="sun-awt-X11-XFramePeer"
 	match app-id="com-sun-tools-javac-launcher-SourceLauncher"
-	open-floating true
+  open-floating true
 }
 
 window-rule {
