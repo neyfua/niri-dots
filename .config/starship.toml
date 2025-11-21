@@ -1,0 +1,54 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+format = """
+$python\
+$git_branch\
+$shell\
+$directory\
+"""
+
+palette = "rose-pine"
+
+[palettes.rose-pine]
+base = '#191724'
+surface = '#1f1d2e'
+overlay = '#26233a'
+love = '#eb6f92'
+gold = '#f6c177'
+rose = '#ebbcba'
+pine = '#31748f'
+foam = '#9ccfd8'
+iris = '#c4a7e7'
+text = '#e0def4'
+subtle = '#908caa'
+muted = '#6e6a86'
+highlight-low = '#21202e'
+highlight-med = '#403d52'
+highlight-high = '#524f67'
+
+[directory]
+disabled = false
+truncation_symbol = '…/'
+format = "[ $path ]($style) "
+style = "bg:overlay fg:text"
+
+[shell]
+disabled = false
+bash_indicator = "/bin/bash"
+zsh_indicator = "/bin/zsh"
+fish_indicator = "/bin/fish"
+nu_indicator = "/bin/nu"
+format = "[ $indicator ]($style)"
+style = "bg:highlight-low fg:text"
+
+[git_branch]
+disabled = false
+format = "[ $symbol$branch ]($style)"
+style = "bg:highlight-med fg:text"
+symbol = " "
+
+[python]
+format = '[(\($virtualenv\) )]($style)'
+style = "fg:iris"

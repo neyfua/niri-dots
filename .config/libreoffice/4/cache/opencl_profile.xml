@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profile>
+ <version>LibreOffice v1</version>
+ <device>
+  <type>opencl</type>
+  <name>NVIDIA GeForce RTX 2050</name>
+  <driver>580.95.05</driver>
+  <time>53381</time>
+  <errors>false</errors>
+ </device>
+ <device>
+  <type>native</type>
+  <time>2101248</time>
+  <errors>false</errors>
+ </device>
+</profile>
