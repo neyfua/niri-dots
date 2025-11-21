@@ -2,13 +2,14 @@
     "appLauncher": {
         "customLaunchPrefix": "",
         "customLaunchPrefixEnabled": false,
+        "enableClipPreview": true,
         "enableClipboardHistory": true,
         "pinnedExecs": [
         ],
         "position": "follow_bar",
         "sortByMostUsed": true,
         "terminalCommand": "",
-        "useApp2Unit": false
+        "useApp2Unit": true
     },
     "audio": {
         "cavaFrameRate": 60,
@@ -60,7 +61,7 @@
                 {
                     "colorizeDistroLogo": false,
                     "customIconPath": "",
-                    "icon": "noctalia",
+                    "icon": "terminal-2",
                     "id": "ControlCenter",
                     "useDistroLogo": false
                 },
@@ -103,6 +104,11 @@
                     ]
                 },
                 {
+                    "hideWhenZero": true,
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true
+                },
+                {
                     "displayMode": "onhover",
                     "id": "Volume"
                 },
@@ -111,7 +117,7 @@
                     "id": "Brightness"
                 },
                 {
-                    "displayMode": "onhover",
+                    "displayMode": "alwaysShow",
                     "id": "Battery",
                     "warningThreshold": 15
                 },
@@ -216,7 +222,7 @@
         "allowPanelsOnScreenWithoutBar": true,
         "animationDisabled": false,
         "animationSpeed": 1.2000000000000002,
-        "avatarImage": "/home/neifua/.face",
+        "avatarImage": "/home/neifua/Pictures/Downloads/66df5f9a0e31ac7f0dd10ea28cdccad2.jpg",
         "compactLockScreen": false,
         "dimmerOpacity": 0.15,
         "enableShadows": true,
@@ -249,12 +255,12 @@
         "weatherShowEffects": true
     },
     "network": {
-        "wifiEnabled": false
+        "wifiEnabled": true
     },
     "nightLight": {
         "autoSchedule": false,
         "dayTemp": "5500",
-        "enabled": true,
+        "enabled": false,
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
