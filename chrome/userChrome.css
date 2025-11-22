@@ -71,7 +71,7 @@
   --tab-border-radius: 6px !important; /*  Tab border radius -- Changes the tabs rounding  */ /*  Default: 6px  */
   --NavbarWidth: 43; /*  Default values: 36 - 43  */
   --TabsHeight: 36; /*  Minimum: 30  */ /*  Default: 36  */
-  --TabsBorder: 10; /*  Doesnt do anything on small layout  */ /*  Default: 8  */
+  --TabsBorder: 6; /*  Doesnt do anything on small layout  */ /*  Default: 8  */
   --NavbarHeightSmall: calc(var(--TabsHeight) + var(--TabsBorder))
     /*  Only on small layout  */
     /*  Default: calc(var(--TabsHeight) + var(--TabsBorder))  */
