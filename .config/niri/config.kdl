@@ -170,6 +170,7 @@ window-rule {
 
 window-rule {
   match app-id="firefox"
+  match app-id="zen"
 	match app-id="chromium-browser"
   match app-id="Spotify"
   match app-id="vesktop"
@@ -180,6 +181,9 @@ window-rule {
 }
 
 window-rule {
+	match app-id="zen" title="Library"
+	match app-id="zen" title="About Zen Browser"
+	match app-id="nemo" title=r#".+ Properties$"#
 	match app-id="java"
 	match app-id="com-sun-tools-javac-launcher-SourceLauncher"
   open-floating true
