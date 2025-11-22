@@ -190,7 +190,7 @@
 .tabbrowser-tab:not(:hover) .tab-close-button {
   opacity: 0% !important;
   transition: 0.3s !important;
-  display: -moz-box !important;
+  display: none !important;
 }
 .tab-close-button[selected]:not(:hover) {
   opacity: 45% !important;
@@ -225,4 +225,8 @@
 }
 .downloadProgress::-moz-progress-bar {
   --download-progress-fill-color: #c4a7e7;
+}
+
+#tabs-newtab-button {
+  display: none !important;
 }
