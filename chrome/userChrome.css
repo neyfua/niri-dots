@@ -71,7 +71,7 @@
   --tab-border-radius: 6px !important; /*  Tab border radius -- Changes the tabs rounding  */ /*  Default: 6px  */
   --NavbarWidth: 43; /*  Default values: 36 - 43  */
   --TabsHeight: 36; /*  Minimum: 30  */ /*  Default: 36  */
-  --TabsBorder: 6; /*  Doesnt do anything on small layout  */ /*  Default: 8  */
+  --TabsBorder: 8; /*  Doesnt do anything on small layout  */ /*  Default: 8  */
   --NavbarHeightSmall: calc(var(--TabsHeight) + var(--TabsBorder))
     /*  Only on small layout  */
     /*  Default: calc(var(--TabsHeight) + var(--TabsBorder))  */
@@ -219,72 +219,10 @@
   display: -moz-box !important;
 }
 
-/* Arrow icon color */
-#downloads-indicator-icon {
-  fill: #e0def4 !important; /* Rose Pine accent */
-  -moz-context-properties: fill, stroke !important;
+#downloads-indicator-progress-inner {
+  background-color: #26233a;
+  --toolbarbutton-icon-fill-attention: #c4a7e7;
 }
-
-/* Outer ring (inactive circle) */
-#downloads-button #downloads-indicator-progress-outer {
-  fill: none !important;
-  stroke: #403d52 !important; /* Dim border ring */
-  stroke-width: 1.5px !important;
-}
-
-/* Inner progress ring (for Firefox using SVG masks) */
-#downloads-button[progress] #downloads-indicator-progress-inner {
-  fill: #c4a7e7 !important; /* Progress fill */
-  stroke: #c4a7e7 !important; /* Progress outline */
-  background-color: #c4a7e7 !important;
-  -moz-context-properties: fill, stroke !important;
-  mask-image: none !important;
-  border-radius: 50% !important;
-}
-
-/* Fallback conic-gradient (forces visible progress on all versions) */
-#downloads-button[progress] .toolbarbutton-icon {
-  background: conic-gradient(
-    #c4a7e7 var(--download-progress, 0%),
-    #21202e 0%
-  ) !important;
-  border-radius: 50% !important;
-}
-
-/* === Download panel (floating popup) === */
-#downloadsPanel,
-.panel-arrowcontent,
-.panel-viewstack,
-#downloadsListBox {
-  background-color: #191724 !important; /* Main background */
-  color: #e0def4 !important; /* Text color */
-  border: 0px !important; /* Subtle border */
-  border-radius: 10px !important;
-  backdrop-filter: blur(8px) !important; /* Soft blur effect */
-}
-
-/* === Individual download item hover === */
-.download:hover {
-  background-color: #26233a !important;
-}
-
-/* === Download panel progress bar === */
-.downloadProgress {
-  appearance: none !important;
-  background-color: #26233a !important; /* Base (Rose Pine background) */
-  border-radius: 4px !important;
-  overflow: hidden !important;
-  height: 4px !important;
-  margin-top: 6px !important;
-}
-
-/* The actual progress inside the bar */
 .downloadProgress::-moz-progress-bar {
-  background-color: #c4a7e7 !important; /* Active progress color */
-  border-radius: 4px !important;
-}
-
-/* === Completed download checkmark color === */
-#downloads-button[attention="success"] #downloads-indicator-icon {
-  fill: #c4a7e7 !important; /* Rose Pine teal */
+  --download-progress-fill-color: #c4a7e7;
 }
