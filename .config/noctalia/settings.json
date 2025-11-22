@@ -8,7 +8,7 @@
         ],
         "position": "follow_bar",
         "sortByMostUsed": true,
-        "terminalCommand": "",
+        "terminalCommand": "foot -e",
         "useApp2Unit": true
     },
     "audio": {
@@ -20,13 +20,13 @@
         "preferredPlayer": "spotify, mpv",
         "visualizerQuality": "high",
         "visualizerType": "wave",
-        "volumeOverdrive": false,
+        "volumeOverdrive": true,
         "volumeStep": 2
     },
     "bar": {
         "backgroundOpacity": 1,
-        "capsuleOpacity": 0.8,
-        "density": "default",
+        "capsuleOpacity": 1,
+        "density": "comfortable",
         "exclusive": true,
         "floating": false,
         "marginHorizontal": 0.25,
@@ -34,48 +34,50 @@
         "monitors": [
         ],
         "outerCorners": false,
-        "position": "bottom",
+        "position": "left",
         "showCapsule": true,
         "widgets": {
             "center": [
                 {
-                    "characterCount": 2,
-                    "hideUnoccupied": true,
-                    "id": "Workspace",
-                    "labelMode": "none"
-                },
-                {
                     "hideMode": "hidden",
                     "hideWhenIdle": false,
                     "id": "MediaMini",
-                    "maxWidth": 245,
+                    "maxWidth": 145,
                     "scrollingMode": "hover",
                     "showAlbumArt": true,
                     "showArtistFirst": true,
                     "showVisualizer": true,
                     "useFixedWidth": false,
                     "visualizerType": "wave"
+                },
+                {
+                    "characterCount": 2,
+                    "followFocusedScreen": false,
+                    "hideUnoccupied": true,
+                    "id": "Workspace",
+                    "labelMode": "none"
                 }
             ],
             "left": [
                 {
                     "colorizeDistroLogo": false,
                     "customIconPath": "",
-                    "icon": "terminal-2",
+                    "icon": "niri",
                     "id": "ControlCenter",
                     "useDistroLogo": false
                 },
                 {
-                    "colorizeIcons": false,
-                    "hideMode": "hidden",
-                    "id": "Taskbar",
-                    "onlyActiveWorkspaces": true,
-                    "onlySameOutput": true
+                    "customFont": "",
+                    "formatHorizontal": "ddd MMM dd, hh:mm AP",
+                    "formatVertical": "hh mm A",
+                    "id": "Clock",
+                    "useCustomFont": false,
+                    "usePrimaryColor": true
                 },
                 {
                     "diskPath": "/",
                     "id": "SystemMonitor",
-                    "showCpuTemp": false,
+                    "showCpuTemp": true,
                     "showCpuUsage": true,
                     "showDiskUsage": false,
                     "showMemoryAsPercent": true,
@@ -86,15 +88,6 @@
             ],
             "right": [
                 {
-                    "capsLockIcon": "letter-c",
-                    "id": "LockKeys",
-                    "numLockIcon": "letter-n",
-                    "scrollLockIcon": "letter-s",
-                    "showCapsLock": true,
-                    "showNumLock": true,
-                    "showScrollLock": true
-                },
-                {
                     "blacklist": [
                     ],
                     "colorizeIcons": false,
@@ -104,30 +97,26 @@
                     ]
                 },
                 {
-                    "hideWhenZero": true,
-                    "id": "NotificationHistory",
-                    "showUnreadBadge": true
+                    "displayMode": "onhover",
+                    "id": "Volume"
                 },
                 {
                     "displayMode": "onhover",
-                    "id": "Volume"
+                    "id": "Microphone"
                 },
                 {
                     "displayMode": "onhover",
                     "id": "Brightness"
                 },
                 {
-                    "displayMode": "alwaysShow",
+                    "displayMode": "onhover",
                     "id": "Battery",
                     "warningThreshold": 15
                 },
                 {
-                    "customFont": "",
-                    "formatHorizontal": "hh:mm AP",
-                    "formatVertical": "HH mm AP",
-                    "id": "Clock",
-                    "useCustomFont": false,
-                    "usePrimaryColor": true
+                    "hideWhenZero": true,
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true
                 }
             ]
         }
@@ -145,7 +134,7 @@
         "generateTemplatesForPredefined": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
-        "matugenSchemeType": "scheme-fruit-salad",
+        "matugenSchemeType": "scheme-rainbow",
         "predefinedScheme": "Rosepine",
         "schedulingMode": "off",
         "useWallpaperColors": false
@@ -208,7 +197,7 @@
     "dock": {
         "backgroundOpacity": 1,
         "colorizeIcons": false,
-        "displayMode": "always_visible",
+        "displayMode": "auto_hide",
         "enabled": false,
         "floatingRatio": 1,
         "monitors": [
@@ -216,21 +205,22 @@
         "onlySameOutput": true,
         "pinnedApps": [
         ],
-        "size": 1
+        "radiusRatio": 0.5,
+        "size": 0.7000000000000001
     },
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
         "animationDisabled": false,
-        "animationSpeed": 1.2000000000000002,
+        "animationSpeed": 1.1,
         "avatarImage": "/home/neifua/Pictures/Downloads/66df5f9a0e31ac7f0dd10ea28cdccad2.jpg",
         "compactLockScreen": false,
-        "dimmerOpacity": 0.15,
+        "dimmerOpacity": 0.4,
         "enableShadows": true,
         "forceBlackScreenCorners": false,
         "language": "",
-        "lockOnSuspend": true,
-        "radiusRatio": 0.55,
-        "scaleRatio": 0.9500000000000001,
+        "lockOnSuspend": false,
+        "radiusRatio": 1,
+        "scaleRatio": 1,
         "screenRadiusRatio": 1,
         "shadowDirection": "center",
         "shadowOffsetX": 0,
@@ -255,16 +245,16 @@
         "weatherShowEffects": true
     },
     "network": {
-        "wifiEnabled": true
+        "wifiEnabled": false
     },
     "nightLight": {
         "autoSchedule": false,
-        "dayTemp": "5500",
-        "enabled": false,
+        "dayTemp": "6500",
+        "enabled": true,
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
-        "nightTemp": "5000"
+        "nightTemp": "5500"
     },
     "notifications": {
         "backgroundOpacity": 1,
@@ -283,7 +273,7 @@
         "autoHideMs": 2000,
         "backgroundOpacity": 1,
         "enabled": true,
-        "location": "bottom",
+        "location": "right",
         "monitors": [
         ],
         "overlayLayer": true
@@ -310,6 +300,11 @@
                 "enabled": true
             },
             {
+                "action": "logout",
+                "countdownEnabled": true,
+                "enabled": true
+            },
+            {
                 "action": "suspend",
                 "countdownEnabled": true,
                 "enabled": false
@@ -321,11 +316,6 @@
             },
             {
                 "action": "reboot",
-                "countdownEnabled": true,
-                "enabled": true
-            },
-            {
-                "action": "logout",
                 "countdownEnabled": true,
                 "enabled": true
             },
@@ -346,7 +336,7 @@
         "diskCriticalThreshold": 90,
         "diskWarningThreshold": 80,
         "memCriticalThreshold": 90,
-        "memWarningThreshold": 80,
+        "memWarningThreshold": 75,
         "tempCriticalThreshold": 90,
         "tempWarningThreshold": 80,
         "useCustomColors": true,
@@ -371,7 +361,7 @@
         "wezterm": false
     },
     "ui": {
-        "fontDefault": "Roboto",
+        "fontDefault": "Cantarell",
         "fontDefaultScale": 1,
         "fontFixed": "Lilex Nerd Font Mono",
         "fontFixedScale": 1.05,
@@ -392,7 +382,7 @@
             {
                 "directory": "/home/neifua/Pictures/Wallpapers",
                 "name": "eDP-1",
-                "wallpaper": "/home/neifua/Pictures/Wallpapers/MC_snow.png"
+                "wallpaper": "/home/neifua/Pictures/Wallpapers/marcille.jpg"
             }
         ],
         "overviewEnabled": false,
@@ -404,14 +394,14 @@
         "transitionDuration": 1000,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": "disc",
-        "useWallhaven": false,
-        "wallhavenCategories": "111",
+        "useWallhaven": true,
+        "wallhavenCategories": "110",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
         "wallhavenQuery": "",
         "wallhavenResolutionHeight": "",
-        "wallhavenResolutionMode": "atleast",
+        "wallhavenResolutionMode": "exact",
         "wallhavenResolutionWidth": "",
-        "wallhavenSorting": "date_added"
+        "wallhavenSorting": "relevance"
     }
 }
